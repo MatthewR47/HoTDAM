@@ -1,5 +1,7 @@
 using FlyKnockdown.Controller;
 using FlyKnockdown.Model;
+using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace FlyKnockdown.View
 {
@@ -48,15 +50,30 @@ namespace FlyKnockdown.View
         private void loadDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FileController fileController = new FileController();
-            List<ActivityMonitor> tempMonitors = fileController.loadFiles();
 
-            if (tempMonitors.Count > 0)
+            try
             {
-                monitorGroupBox.Enabled = true;
-                monitors = tempMonitors;
-            }
+                List<ActivityMonitor> tempMonitors = fileController.loadFiles();
 
-            monitorListBox.DataSource = monitors;
+                if (tempMonitors.Count > 0)
+                {
+                    monitorGroupBox.Enabled = true;
+                    monitors = tempMonitors;
+                }
+
+                monitorListBox.DataSource = monitors;
+            }
+            catch (IOException) 
+            {
+                showMessageDialog("There was an issue opening one or more of the " +
+                                  "files selected (this is often caused by the file " +
+                                  "being open in another program).");
+            }
+            catch (Exception) 
+            {
+                showMessageDialog("There was an issue with one or more of the files" +
+                                  " you selected.");
+            }
         }
 
         private static DialogResult showInputDialog(ref string input)
@@ -87,6 +104,38 @@ namespace FlyKnockdown.View
 
             DialogResult result = inputBox.ShowDialog();
             input = textBox.Text;
+            return result;
+        }
+
+        private static DialogResult showMessageDialog(string message)
+        {
+            System.Drawing.Size size = new System.Drawing.Size(200, 70);
+            Form messageBox = new Form();
+            messageBox.StartPosition = FormStartPosition.CenterScreen;
+            messageBox.AutoSize = true;
+
+            messageBox.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            messageBox.ClientSize = size;
+            messageBox.Text = "Name";
+
+            System.Windows.Forms.Label label = new Label();
+            label.AutoSize = true;
+            label.Location = new System.Drawing.Point(5, 5);
+            label.Text = message;
+            messageBox.Controls.Add(label);
+
+            Button okButton = new Button();
+            okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            okButton.Name = "okButton";
+            okButton.Size = new System.Drawing.Size(75, 23);
+            okButton.Text = "&OK";
+            okButton.Left = (messageBox.Width - okButton.Width) / 2;
+            okButton.Top = (39);
+            messageBox.Controls.Add(okButton);
+
+            messageBox.AcceptButton = okButton;
+
+            DialogResult result = messageBox.ShowDialog();
             return result;
         }
 

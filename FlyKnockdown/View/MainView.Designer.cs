@@ -76,7 +76,7 @@
             // cellOne
             // 
             this.cellOne.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellOne.Location = new System.Drawing.Point(977, 33);
+            this.cellOne.Location = new System.Drawing.Point(975, 33);
             this.cellOne.Name = "cellOne";
             this.cellOne.Size = new System.Drawing.Size(132, 28);
             this.cellOne.TabIndex = 0;
@@ -86,7 +86,7 @@
             // cellTwo
             // 
             this.cellTwo.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwo.Location = new System.Drawing.Point(839, 33);
+            this.cellTwo.Location = new System.Drawing.Point(837, 33);
             this.cellTwo.Name = "cellTwo";
             this.cellTwo.Size = new System.Drawing.Size(132, 28);
             this.cellTwo.TabIndex = 1;
@@ -96,7 +96,7 @@
             // cellThree
             // 
             this.cellThree.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellThree.Location = new System.Drawing.Point(701, 33);
+            this.cellThree.Location = new System.Drawing.Point(699, 33);
             this.cellThree.Name = "cellThree";
             this.cellThree.Size = new System.Drawing.Size(132, 28);
             this.cellThree.TabIndex = 2;
@@ -106,7 +106,7 @@
             // cellFour
             // 
             this.cellFour.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellFour.Location = new System.Drawing.Point(563, 33);
+            this.cellFour.Location = new System.Drawing.Point(561, 33);
             this.cellFour.Name = "cellFour";
             this.cellFour.Size = new System.Drawing.Size(132, 28);
             this.cellFour.TabIndex = 3;
@@ -116,7 +116,7 @@
             // cellFive
             // 
             this.cellFive.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellFive.Location = new System.Drawing.Point(425, 33);
+            this.cellFive.Location = new System.Drawing.Point(423, 33);
             this.cellFive.Name = "cellFive";
             this.cellFive.Size = new System.Drawing.Size(132, 28);
             this.cellFive.TabIndex = 4;
@@ -126,7 +126,7 @@
             // cellSix
             // 
             this.cellSix.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellSix.Location = new System.Drawing.Point(287, 33);
+            this.cellSix.Location = new System.Drawing.Point(285, 33);
             this.cellSix.Name = "cellSix";
             this.cellSix.Size = new System.Drawing.Size(132, 28);
             this.cellSix.TabIndex = 5;
@@ -136,7 +136,7 @@
             // cellSeven
             // 
             this.cellSeven.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellSeven.Location = new System.Drawing.Point(149, 33);
+            this.cellSeven.Location = new System.Drawing.Point(147, 33);
             this.cellSeven.Name = "cellSeven";
             this.cellSeven.Size = new System.Drawing.Size(132, 28);
             this.cellSeven.TabIndex = 6;
@@ -146,7 +146,7 @@
             // cellEight
             // 
             this.cellEight.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellEight.Location = new System.Drawing.Point(11, 33);
+            this.cellEight.Location = new System.Drawing.Point(9, 33);
             this.cellEight.Name = "cellEight";
             this.cellEight.Size = new System.Drawing.Size(132, 28);
             this.cellEight.TabIndex = 7;
@@ -156,7 +156,7 @@
             // cellNine
             // 
             this.cellNine.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellNine.Location = new System.Drawing.Point(977, 67);
+            this.cellNine.Location = new System.Drawing.Point(975, 67);
             this.cellNine.Name = "cellNine";
             this.cellNine.Size = new System.Drawing.Size(132, 28);
             this.cellNine.TabIndex = 8;
@@ -166,7 +166,7 @@
             // cellTen
             // 
             this.cellTen.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTen.Location = new System.Drawing.Point(839, 67);
+            this.cellTen.Location = new System.Drawing.Point(837, 67);
             this.cellTen.Name = "cellTen";
             this.cellTen.Size = new System.Drawing.Size(132, 28);
             this.cellTen.TabIndex = 9;
@@ -176,7 +176,7 @@
             // cellEleven
             // 
             this.cellEleven.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellEleven.Location = new System.Drawing.Point(701, 67);
+            this.cellEleven.Location = new System.Drawing.Point(699, 67);
             this.cellEleven.Name = "cellEleven";
             this.cellEleven.Size = new System.Drawing.Size(132, 28);
             this.cellEleven.TabIndex = 10;
@@ -186,7 +186,7 @@
             // cellTwelve
             // 
             this.cellTwelve.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwelve.Location = new System.Drawing.Point(563, 67);
+            this.cellTwelve.Location = new System.Drawing.Point(561, 67);
             this.cellTwelve.Name = "cellTwelve";
             this.cellTwelve.Size = new System.Drawing.Size(132, 28);
             this.cellTwelve.TabIndex = 11;
@@ -196,7 +196,7 @@
             // cellThirteen
             // 
             this.cellThirteen.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellThirteen.Location = new System.Drawing.Point(425, 67);
+            this.cellThirteen.Location = new System.Drawing.Point(423, 67);
             this.cellThirteen.Name = "cellThirteen";
             this.cellThirteen.Size = new System.Drawing.Size(132, 28);
             this.cellThirteen.TabIndex = 12;
@@ -206,7 +206,7 @@
             // cellFourteen
             // 
             this.cellFourteen.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellFourteen.Location = new System.Drawing.Point(287, 67);
+            this.cellFourteen.Location = new System.Drawing.Point(285, 67);
             this.cellFourteen.Name = "cellFourteen";
             this.cellFourteen.Size = new System.Drawing.Size(132, 28);
             this.cellFourteen.TabIndex = 13;
@@ -216,7 +216,7 @@
             // cellFifteen
             // 
             this.cellFifteen.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellFifteen.Location = new System.Drawing.Point(149, 67);
+            this.cellFifteen.Location = new System.Drawing.Point(147, 67);
             this.cellFifteen.Name = "cellFifteen";
             this.cellFifteen.Size = new System.Drawing.Size(132, 28);
             this.cellFifteen.TabIndex = 14;
@@ -226,7 +226,7 @@
             // cellSixteen
             // 
             this.cellSixteen.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellSixteen.Location = new System.Drawing.Point(11, 67);
+            this.cellSixteen.Location = new System.Drawing.Point(9, 67);
             this.cellSixteen.Name = "cellSixteen";
             this.cellSixteen.Size = new System.Drawing.Size(132, 28);
             this.cellSixteen.TabIndex = 15;
@@ -236,7 +236,7 @@
             // cellSeventeen
             // 
             this.cellSeventeen.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellSeventeen.Location = new System.Drawing.Point(977, 101);
+            this.cellSeventeen.Location = new System.Drawing.Point(975, 101);
             this.cellSeventeen.Name = "cellSeventeen";
             this.cellSeventeen.Size = new System.Drawing.Size(132, 28);
             this.cellSeventeen.TabIndex = 16;
@@ -246,7 +246,7 @@
             // cellEighteen
             // 
             this.cellEighteen.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellEighteen.Location = new System.Drawing.Point(839, 101);
+            this.cellEighteen.Location = new System.Drawing.Point(837, 101);
             this.cellEighteen.Name = "cellEighteen";
             this.cellEighteen.Size = new System.Drawing.Size(132, 28);
             this.cellEighteen.TabIndex = 17;
@@ -256,7 +256,7 @@
             // cellNineteen
             // 
             this.cellNineteen.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellNineteen.Location = new System.Drawing.Point(701, 101);
+            this.cellNineteen.Location = new System.Drawing.Point(699, 101);
             this.cellNineteen.Name = "cellNineteen";
             this.cellNineteen.Size = new System.Drawing.Size(132, 28);
             this.cellNineteen.TabIndex = 18;
@@ -266,7 +266,7 @@
             // cellTwenty
             // 
             this.cellTwenty.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwenty.Location = new System.Drawing.Point(563, 101);
+            this.cellTwenty.Location = new System.Drawing.Point(561, 101);
             this.cellTwenty.Name = "cellTwenty";
             this.cellTwenty.Size = new System.Drawing.Size(132, 28);
             this.cellTwenty.TabIndex = 19;
@@ -276,7 +276,7 @@
             // cellTwentyone
             // 
             this.cellTwentyone.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwentyone.Location = new System.Drawing.Point(425, 101);
+            this.cellTwentyone.Location = new System.Drawing.Point(423, 101);
             this.cellTwentyone.Name = "cellTwentyone";
             this.cellTwentyone.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyone.TabIndex = 20;
@@ -286,7 +286,7 @@
             // cellTwentytwo
             // 
             this.cellTwentytwo.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwentytwo.Location = new System.Drawing.Point(287, 101);
+            this.cellTwentytwo.Location = new System.Drawing.Point(285, 101);
             this.cellTwentytwo.Name = "cellTwentytwo";
             this.cellTwentytwo.Size = new System.Drawing.Size(132, 28);
             this.cellTwentytwo.TabIndex = 21;
@@ -296,7 +296,7 @@
             // cellTwentythree
             // 
             this.cellTwentythree.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwentythree.Location = new System.Drawing.Point(149, 101);
+            this.cellTwentythree.Location = new System.Drawing.Point(147, 101);
             this.cellTwentythree.Name = "cellTwentythree";
             this.cellTwentythree.Size = new System.Drawing.Size(132, 28);
             this.cellTwentythree.TabIndex = 22;
@@ -306,7 +306,7 @@
             // cellTwentyfour
             // 
             this.cellTwentyfour.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwentyfour.Location = new System.Drawing.Point(11, 101);
+            this.cellTwentyfour.Location = new System.Drawing.Point(9, 101);
             this.cellTwentyfour.Name = "cellTwentyfour";
             this.cellTwentyfour.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyfour.TabIndex = 23;
@@ -316,7 +316,7 @@
             // cellTwentyfive
             // 
             this.cellTwentyfive.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwentyfive.Location = new System.Drawing.Point(977, 135);
+            this.cellTwentyfive.Location = new System.Drawing.Point(975, 135);
             this.cellTwentyfive.Name = "cellTwentyfive";
             this.cellTwentyfive.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyfive.TabIndex = 24;
@@ -326,7 +326,7 @@
             // cellTwentysix
             // 
             this.cellTwentysix.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwentysix.Location = new System.Drawing.Point(839, 135);
+            this.cellTwentysix.Location = new System.Drawing.Point(837, 135);
             this.cellTwentysix.Name = "cellTwentysix";
             this.cellTwentysix.Size = new System.Drawing.Size(132, 28);
             this.cellTwentysix.TabIndex = 25;
@@ -336,7 +336,7 @@
             // cellTwentyseven
             // 
             this.cellTwentyseven.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwentyseven.Location = new System.Drawing.Point(701, 135);
+            this.cellTwentyseven.Location = new System.Drawing.Point(699, 135);
             this.cellTwentyseven.Name = "cellTwentyseven";
             this.cellTwentyseven.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyseven.TabIndex = 26;
@@ -346,7 +346,7 @@
             // cellTwentyeight
             // 
             this.cellTwentyeight.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwentyeight.Location = new System.Drawing.Point(563, 135);
+            this.cellTwentyeight.Location = new System.Drawing.Point(561, 135);
             this.cellTwentyeight.Name = "cellTwentyeight";
             this.cellTwentyeight.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyeight.TabIndex = 27;
@@ -356,7 +356,7 @@
             // cellTwentynine
             // 
             this.cellTwentynine.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellTwentynine.Location = new System.Drawing.Point(425, 135);
+            this.cellTwentynine.Location = new System.Drawing.Point(423, 135);
             this.cellTwentynine.Name = "cellTwentynine";
             this.cellTwentynine.Size = new System.Drawing.Size(132, 28);
             this.cellTwentynine.TabIndex = 28;
@@ -366,7 +366,7 @@
             // cellThirty
             // 
             this.cellThirty.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellThirty.Location = new System.Drawing.Point(287, 135);
+            this.cellThirty.Location = new System.Drawing.Point(285, 135);
             this.cellThirty.Name = "cellThirty";
             this.cellThirty.Size = new System.Drawing.Size(132, 28);
             this.cellThirty.TabIndex = 29;
@@ -376,7 +376,7 @@
             // cellThirtyone
             // 
             this.cellThirtyone.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellThirtyone.Location = new System.Drawing.Point(149, 135);
+            this.cellThirtyone.Location = new System.Drawing.Point(147, 135);
             this.cellThirtyone.Name = "cellThirtyone";
             this.cellThirtyone.Size = new System.Drawing.Size(132, 28);
             this.cellThirtyone.TabIndex = 30;
@@ -386,7 +386,7 @@
             // cellThirtytwo
             // 
             this.cellThirtytwo.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cellThirtytwo.Location = new System.Drawing.Point(11, 135);
+            this.cellThirtytwo.Location = new System.Drawing.Point(9, 135);
             this.cellThirtytwo.Name = "cellThirtytwo";
             this.cellThirtytwo.Size = new System.Drawing.Size(132, 28);
             this.cellThirtytwo.TabIndex = 31;
@@ -440,7 +440,7 @@
             // 
             // copyGroupDefinitionsBtn
             // 
-            this.copyGroupDefinitionsBtn.Location = new System.Drawing.Point(701, 180);
+            this.copyGroupDefinitionsBtn.Location = new System.Drawing.Point(699, 180);
             this.copyGroupDefinitionsBtn.Name = "copyGroupDefinitionsBtn";
             this.copyGroupDefinitionsBtn.Size = new System.Drawing.Size(330, 43);
             this.copyGroupDefinitionsBtn.TabIndex = 33;
@@ -449,7 +449,7 @@
             // 
             // groupDefineBtn
             // 
-            this.groupDefineBtn.Location = new System.Drawing.Point(89, 180);
+            this.groupDefineBtn.Location = new System.Drawing.Point(87, 180);
             this.groupDefineBtn.Name = "groupDefineBtn";
             this.groupDefineBtn.Size = new System.Drawing.Size(330, 43);
             this.groupDefineBtn.TabIndex = 32;
@@ -464,7 +464,7 @@
             this.monitorListBox.ItemHeight = 21;
             this.monitorListBox.Location = new System.Drawing.Point(6, 33);
             this.monitorListBox.Name = "monitorListBox";
-            this.monitorListBox.Size = new System.Drawing.Size(148, 193);
+            this.monitorListBox.Size = new System.Drawing.Size(158, 193);
             this.monitorListBox.TabIndex = 33;
             this.monitorListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -475,7 +475,7 @@
             this.monitorGroupBox.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.monitorGroupBox.Location = new System.Drawing.Point(38, 56);
             this.monitorGroupBox.Name = "monitorGroupBox";
-            this.monitorGroupBox.Size = new System.Drawing.Size(164, 243);
+            this.monitorGroupBox.Size = new System.Drawing.Size(170, 243);
             this.monitorGroupBox.TabIndex = 34;
             this.monitorGroupBox.TabStop = false;
             this.monitorGroupBox.Text = "Monitor Select";

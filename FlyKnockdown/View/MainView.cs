@@ -1,7 +1,5 @@
 using FlyKnockdown.Controller;
 using FlyKnockdown.Model;
-using System.Windows.Forms;
-using System.Windows.Forms.Design;
 
 namespace FlyKnockdown.View
 {
@@ -19,6 +17,7 @@ namespace FlyKnockdown.View
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             groupDesignationGroupBox.Enabled = true;
+            monitorDataGroupBox.Enabled = true;
             groupDesignationGroupBox.Text = monitorListBox.Text + " Group Designation";
             updateCells();
         }
@@ -31,6 +30,7 @@ namespace FlyKnockdown.View
                 monitorGroupBox.Enabled = false;           
                 menuStrip1.Enabled = false;
                 copyGroupDefinitionsBtn.Enabled = false;
+                monitorDataGroupBox.Enabled = false;
 
                 string groupName = "Default Group Name";
                 showInputDialog(ref groupName);
@@ -43,17 +43,16 @@ namespace FlyKnockdown.View
                 monitorGroupBox.Enabled = true;
                 menuStrip1.Enabled = true;
                 copyGroupDefinitionsBtn.Enabled = true;
+                monitorDataGroupBox.Enabled = true;
                 multiSelectGroupName = null;
             }
         }
 
         private void loadDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FileController fileController = new FileController();
-
             try
             {
-                List<ActivityMonitor> tempMonitors = fileController.loadFiles();
+                List<ActivityMonitor> tempMonitors = FileController.loadFiles();
 
                 if (tempMonitors.Count > 0)
                 {
@@ -107,7 +106,61 @@ namespace FlyKnockdown.View
             return result;
         }
 
-        private static DialogResult showMessageDialog(string message)
+        private void updateMonitorData()
+        {
+            monitorDataGridView.Rows.Clear();
+            monitorDataGridView.ColumnCount = 33;
+
+            Fly[] flies = ((ActivityMonitor)monitorListBox.SelectedItem).getFlies();
+
+            // Add the labels
+            DataGridViewRow row = new DataGridViewRow();
+            row.CreateCells(monitorDataGridView);
+            row.Cells[0].Value = "Time Stamp";
+            for (int i = 1; i < 33; i++)
+            {
+                if (!flies[i-1].getGroupName().Equals("") && !(flies[i - 1].getGroupName() == null))
+                {
+                    row.Cells[i].Value = "Fly " + i + " - " +  flies[i - 1].getGroupName();
+                }
+                else
+                {
+                    row.Cells[i].Value = "Fly " + i;
+                }
+                
+            }
+            row.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            monitorDataGridView.Rows.Add(row);
+
+            // Add the actual data
+            string[,] timeStamps = ((ActivityMonitor)monitorListBox.SelectedItem).getTimeInterval();
+            string[,] dataGridInformation = new string[33, 302];
+            for (int i = 0; i < 302; i++)
+            {
+                dataGridInformation[0, i] = timeStamps[i, 1];
+            }
+            for (int i = 0; i < 32; i++)
+            {
+                for (int j = 0; j < 302; j++)
+                {
+                    dataGridInformation[i + 1, j] = flies[i].getMovement()[j];
+                }
+            }
+
+            for (int i = 0; i < 302; i++)
+            {
+                DataGridViewRow dataRow = new DataGridViewRow();
+                dataRow.CreateCells(monitorDataGridView);
+                for (int j = 0; j < 33; j++)
+                {
+                    dataRow.Cells[j].Value = dataGridInformation[j, i];
+                }
+                dataRow.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                monitorDataGridView.Rows.Add(dataRow);
+            }
+        }
+
+        private static void showMessageDialog(string message)
         {
             System.Drawing.Size size = new System.Drawing.Size(200, 70);
             Form messageBox = new Form();
@@ -135,8 +188,7 @@ namespace FlyKnockdown.View
 
             messageBox.AcceptButton = okButton;
 
-            DialogResult result = messageBox.ShowDialog();
-            return result;
+            messageBox.ShowDialog();
         }
 
         private void updateCells()
@@ -175,6 +227,8 @@ namespace FlyKnockdown.View
             cellThirty.Text = currentMonitor.getGroup(29);
             cellThirtyone.Text = currentMonitor.getGroup(30);
             cellThirtytwo.Text = currentMonitor.getGroup(31);
+
+            updateMonitorData();
         }
 
         private void cellOne_Click(object sender, EventArgs e)

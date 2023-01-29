@@ -1,10 +1,12 @@
-﻿namespace FlyKnockdown.Model
+﻿using FlyKnockdown.Controller;
+using FlyKnockdown.View;
+namespace FlyKnockdown.Model
 {
     internal class ActivityMonitor
     {
         private string fileName;
         private Fly[] flies;
-        private string[,] timeInterval;
+        private string[,] timeIntervals;
 
         public ActivityMonitor(string name)
         {
@@ -29,33 +31,45 @@
         }
         public void assignTimeInterval()
         {
-            timeInterval = new string[302,2];
+            timeIntervals = new string[302,2];
             string[] lines = File.ReadAllLines(@fileName);
             for (int i = 0; i < 302; i++)
             {
                 string[] lineElements = lines[i].Split("\t");
-                timeInterval[i,0] = lineElements[2];
-                timeInterval[i, 1] = lineElements[3];
+                timeIntervals[i,0] = lineElements[1];
+                timeIntervals[i, 1] = lineElements[2];
             }
         }
 
         public void assignFlies()
         {
             flies = new Fly[32];
+            string[] lines = File.ReadAllLines(@fileName);
 
             for (int i = 0; i < 32; i++)
             {
-                string[] lines = File.ReadAllLines(@fileName);
                 string[] flyMovement = new string[302];
 
                 for (int j = 0; j < 302; j++)
                 {
-                    string[] lineElements = lines[i].Split("\t");
+                    string[] lineElements = lines[j].Split("\t");
                     flyMovement[j] = lineElements[i + 10];
                 }
 
                 flies[i] = new Fly(flyMovement);
+                AnalysisController.assignKnockdown(flies[i], timeIntervals);
+
             }
+        }
+
+        public Fly[] getFlies()
+        {
+            return flies;
+        }
+
+        public string[,] getTimeInterval()
+        {
+            return timeIntervals;
         }
 
     }

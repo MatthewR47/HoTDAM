@@ -2,9 +2,9 @@
 
 namespace FlyKnockdown.Controller
 {
-    internal class FileController
+    internal static class FileController
     {
-        public List<ActivityMonitor> loadFiles()
+        public static List<ActivityMonitor> loadFiles()
         {
             List <ActivityMonitor> monitorList = new List<ActivityMonitor>();
 
@@ -26,6 +26,21 @@ namespace FlyKnockdown.Controller
                 }
             }
             return monitorList;
+        }
+
+        public static void exportMonitors(List<ActivityMonitor> monitors)
+        {
+            foreach (ActivityMonitor currentMonitor in monitors)
+            {
+
+            }
+        }
+
+        public static void exportMonitors(ActivityMonitor inMonitor)
+        {
+            List<ActivityMonitor> monitor = new List<ActivityMonitor>();
+            monitor.Add(inMonitor);
+            exportMonitors(monitor);
         }
     }
 }

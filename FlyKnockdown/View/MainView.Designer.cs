@@ -68,9 +68,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportSelectedMonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.monitorDataGroupBox = new System.Windows.Forms.GroupBox();
+            this.monitorDataGridView = new System.Windows.Forms.DataGridView();
             this.groupDesignationGroupBox.SuspendLayout();
             this.monitorGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.monitorDataGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.monitorDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // cellOne
@@ -431,7 +438,7 @@
             this.groupDesignationGroupBox.Controls.Add(this.cellSeventeen);
             this.groupDesignationGroupBox.Enabled = false;
             this.groupDesignationGroupBox.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupDesignationGroupBox.Location = new System.Drawing.Point(38, 332);
+            this.groupDesignationGroupBox.Location = new System.Drawing.Point(37, 579);
             this.groupDesignationGroupBox.Name = "groupDesignationGroupBox";
             this.groupDesignationGroupBox.Size = new System.Drawing.Size(1115, 243);
             this.groupDesignationGroupBox.TabIndex = 32;
@@ -464,7 +471,7 @@
             this.monitorListBox.ItemHeight = 21;
             this.monitorListBox.Location = new System.Drawing.Point(6, 33);
             this.monitorListBox.Name = "monitorListBox";
-            this.monitorListBox.Size = new System.Drawing.Size(158, 193);
+            this.monitorListBox.Size = new System.Drawing.Size(158, 466);
             this.monitorListBox.TabIndex = 33;
             this.monitorListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -473,9 +480,9 @@
             this.monitorGroupBox.Controls.Add(this.monitorListBox);
             this.monitorGroupBox.Enabled = false;
             this.monitorGroupBox.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.monitorGroupBox.Location = new System.Drawing.Point(38, 56);
+            this.monitorGroupBox.Location = new System.Drawing.Point(37, 56);
             this.monitorGroupBox.Name = "monitorGroupBox";
-            this.monitorGroupBox.Size = new System.Drawing.Size(170, 243);
+            this.monitorGroupBox.Size = new System.Drawing.Size(170, 517);
             this.monitorGroupBox.TabIndex = 34;
             this.monitorGroupBox.TabStop = false;
             this.monitorGroupBox.Text = "Monitor Select";
@@ -487,14 +494,15 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1184, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1190, 33);
             this.menuStrip1.TabIndex = 35;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadDataToolStripMenuItem});
+            this.loadDataToolStripMenuItem,
+            this.exportDataToolStripMenuItem});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
@@ -503,21 +511,66 @@
             // loadDataToolStripMenuItem
             // 
             this.loadDataToolStripMenuItem.Name = "loadDataToolStripMenuItem";
-            this.loadDataToolStripMenuItem.Size = new System.Drawing.Size(165, 30);
-            this.loadDataToolStripMenuItem.Text = "Load Data";
+            this.loadDataToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.loadDataToolStripMenuItem.Text = "Load Monitor Data";
             this.loadDataToolStripMenuItem.Click += new System.EventHandler(this.loadDataToolStripMenuItem_Click);
+            // 
+            // exportDataToolStripMenuItem
+            // 
+            this.exportDataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportAllToolStripMenuItem,
+            this.exportSelectedMonitorToolStripMenuItem});
+            this.exportDataToolStripMenuItem.Name = "exportDataToolStripMenuItem";
+            this.exportDataToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.exportDataToolStripMenuItem.Text = "Export Knockdown Data";
+            // 
+            // exportAllToolStripMenuItem
+            // 
+            this.exportAllToolStripMenuItem.Name = "exportAllToolStripMenuItem";
+            this.exportAllToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.exportAllToolStripMenuItem.Text = "Export All Monitors";
+            // 
+            // exportSelectedMonitorToolStripMenuItem
+            // 
+            this.exportSelectedMonitorToolStripMenuItem.Name = "exportSelectedMonitorToolStripMenuItem";
+            this.exportSelectedMonitorToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.exportSelectedMonitorToolStripMenuItem.Text = "Export Selected Monitor";
+            // 
+            // monitorDataGroupBox
+            // 
+            this.monitorDataGroupBox.Controls.Add(this.monitorDataGridView);
+            this.monitorDataGroupBox.Enabled = false;
+            this.monitorDataGroupBox.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.monitorDataGroupBox.Location = new System.Drawing.Point(226, 56);
+            this.monitorDataGroupBox.Name = "monitorDataGroupBox";
+            this.monitorDataGroupBox.Size = new System.Drawing.Size(926, 517);
+            this.monitorDataGroupBox.TabIndex = 34;
+            this.monitorDataGroupBox.TabStop = false;
+            this.monitorDataGroupBox.Text = "Monitor Data";
+            // 
+            // monitorDataGridView
+            // 
+            this.monitorDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.monitorDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.monitorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.monitorDataGridView.Location = new System.Drawing.Point(6, 33);
+            this.monitorDataGridView.Name = "monitorDataGridView";
+            this.monitorDataGridView.RowTemplate.Height = 25;
+            this.monitorDataGridView.Size = new System.Drawing.Size(912, 462);
+            this.monitorDataGridView.TabIndex = 0;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 620);
+            this.ClientSize = new System.Drawing.Size(1190, 841);
+            this.Controls.Add(this.monitorDataGroupBox);
             this.Controls.Add(this.monitorGroupBox);
             this.Controls.Add(this.groupDesignationGroupBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(1200, 659);
-            this.MinimumSize = new System.Drawing.Size(1200, 659);
+            this.MaximumSize = new System.Drawing.Size(1206, 880);
+            this.MinimumSize = new System.Drawing.Size(1206, 880);
             this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Knockdown Analysis";
@@ -525,6 +578,8 @@
             this.monitorGroupBox.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.monitorDataGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.monitorDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,5 +627,10 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem loadDataToolStripMenuItem;
+        private ToolStripMenuItem exportDataToolStripMenuItem;
+        private ToolStripMenuItem exportAllToolStripMenuItem;
+        private ToolStripMenuItem exportSelectedMonitorToolStripMenuItem;
+        private GroupBox monitorDataGroupBox;
+        private DataGridView monitorDataGridView;
     }
 }

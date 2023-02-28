@@ -18,6 +18,8 @@ namespace FlyKnockdown.View
         {
             groupDesignationGroupBox.Enabled = true;
             monitorDataGroupBox.Enabled = true;
+            exportActivityDataToolStripMenuItem.Enabled = true;
+            exportDataToolStripMenuItem.Enabled = true;
             groupDesignationGroupBox.Text = monitorListBox.Text + " Group Designation";
             updateCells();
         }
@@ -31,6 +33,8 @@ namespace FlyKnockdown.View
                 menuStrip1.Enabled = false;
                 copyGroupDefinitionsBtn.Enabled = false;
                 monitorDataGroupBox.Enabled = false;
+                exportActivityDataToolStripMenuItem.Enabled = false;
+                exportDataToolStripMenuItem.Enabled = false;
 
                 string groupName = "Default Group Name";
                 showInputDialog(ref groupName);
@@ -44,6 +48,8 @@ namespace FlyKnockdown.View
                 menuStrip1.Enabled = true;
                 copyGroupDefinitionsBtn.Enabled = true;
                 monitorDataGroupBox.Enabled = true;
+                exportActivityDataToolStripMenuItem.Enabled = true;
+                exportDataToolStripMenuItem.Enabled = true;
                 multiSelectGroupName = null;
             }
         }
@@ -57,6 +63,8 @@ namespace FlyKnockdown.View
                 if (tempMonitors.Count > 0)
                 {
                     monitorGroupBox.Enabled = true;
+                    exportActivityDataToolStripMenuItem.Enabled = true;
+                    exportDataToolStripMenuItem.Enabled = true;
                     monitors = tempMonitors;
                 }
 
@@ -773,6 +781,45 @@ namespace FlyKnockdown.View
             }
             currentMonitor.setGroup(31, groupName);
             updateCells();
+        }
+
+        private void exportActivityDataToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FileController.exportActivityData((ActivityMonitor)monitorListBox.SelectedItem);
+        }
+
+        private void exportSelectedMonitorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FileController.exportKnockdownData((ActivityMonitor)monitorListBox.SelectedItem);
+        }
+
+        private void exportAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<ActivityMonitor> monitorList = new List<ActivityMonitor>();
+
+            foreach (ActivityMonitor monitor in monitorListBox.Items)
+            {
+                monitorList.Add(monitor);
+            }
+
+            FileController.exportKnockdownData(monitorList);
+        }
+
+        private void exportAllMonitorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<ActivityMonitor> monitorList = new List<ActivityMonitor>();
+
+            foreach (ActivityMonitor monitor in monitorListBox.Items)
+            {
+                monitorList.Add(monitor);
+            }
+
+            FileController.exportActivityData(monitorList, "Activity");
+        }
+
+        private void monitorDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

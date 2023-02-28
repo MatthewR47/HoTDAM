@@ -29,6 +29,7 @@ namespace FlyKnockdown.Model
         {
             return fileName.Substring(fileName.LastIndexOf("\\") + 1);
         }
+
         public void assignTimeInterval()
         {
             timeIntervals = new string[302,2];

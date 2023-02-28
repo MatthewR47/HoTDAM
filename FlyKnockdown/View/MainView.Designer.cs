@@ -71,6 +71,9 @@
             this.exportDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportSelectedMonitorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportActivityDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportAllMonitorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportActivityDataToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.monitorDataGroupBox = new System.Windows.Forms.GroupBox();
             this.monitorDataGridView = new System.Windows.Forms.DataGridView();
             this.groupDesignationGroupBox.SuspendLayout();
@@ -87,6 +90,7 @@
             this.cellOne.Name = "cellOne";
             this.cellOne.Size = new System.Drawing.Size(132, 28);
             this.cellOne.TabIndex = 0;
+            this.cellOne.Text = "Fly 1";
             this.cellOne.UseVisualStyleBackColor = true;
             this.cellOne.Click += new System.EventHandler(this.cellOne_Click);
             // 
@@ -97,6 +101,7 @@
             this.cellTwo.Name = "cellTwo";
             this.cellTwo.Size = new System.Drawing.Size(132, 28);
             this.cellTwo.TabIndex = 1;
+            this.cellTwo.Text = "Fly 2";
             this.cellTwo.UseVisualStyleBackColor = true;
             this.cellTwo.Click += new System.EventHandler(this.cellTwo_Click);
             // 
@@ -107,6 +112,7 @@
             this.cellThree.Name = "cellThree";
             this.cellThree.Size = new System.Drawing.Size(132, 28);
             this.cellThree.TabIndex = 2;
+            this.cellThree.Text = "Fly 3";
             this.cellThree.UseVisualStyleBackColor = true;
             this.cellThree.Click += new System.EventHandler(this.cellThree_Click);
             // 
@@ -117,6 +123,7 @@
             this.cellFour.Name = "cellFour";
             this.cellFour.Size = new System.Drawing.Size(132, 28);
             this.cellFour.TabIndex = 3;
+            this.cellFour.Text = "Fly 4";
             this.cellFour.UseVisualStyleBackColor = true;
             this.cellFour.Click += new System.EventHandler(this.cellFour_Click);
             // 
@@ -127,6 +134,7 @@
             this.cellFive.Name = "cellFive";
             this.cellFive.Size = new System.Drawing.Size(132, 28);
             this.cellFive.TabIndex = 4;
+            this.cellFive.Text = "Fly 5";
             this.cellFive.UseVisualStyleBackColor = true;
             this.cellFive.Click += new System.EventHandler(this.cellFive_Click);
             // 
@@ -137,6 +145,7 @@
             this.cellSix.Name = "cellSix";
             this.cellSix.Size = new System.Drawing.Size(132, 28);
             this.cellSix.TabIndex = 5;
+            this.cellSix.Text = "Fly 6";
             this.cellSix.UseVisualStyleBackColor = true;
             this.cellSix.Click += new System.EventHandler(this.cellSix_Click);
             // 
@@ -147,6 +156,7 @@
             this.cellSeven.Name = "cellSeven";
             this.cellSeven.Size = new System.Drawing.Size(132, 28);
             this.cellSeven.TabIndex = 6;
+            this.cellSeven.Text = "Fly 7";
             this.cellSeven.UseVisualStyleBackColor = true;
             this.cellSeven.Click += new System.EventHandler(this.cellSeven_Click);
             // 
@@ -157,6 +167,7 @@
             this.cellEight.Name = "cellEight";
             this.cellEight.Size = new System.Drawing.Size(132, 28);
             this.cellEight.TabIndex = 7;
+            this.cellEight.Text = "Fly 8";
             this.cellEight.UseVisualStyleBackColor = true;
             this.cellEight.Click += new System.EventHandler(this.cellEight_Click);
             // 
@@ -167,6 +178,7 @@
             this.cellNine.Name = "cellNine";
             this.cellNine.Size = new System.Drawing.Size(132, 28);
             this.cellNine.TabIndex = 8;
+            this.cellNine.Text = "Fly 9";
             this.cellNine.UseVisualStyleBackColor = true;
             this.cellNine.Click += new System.EventHandler(this.cellNine_Click);
             // 
@@ -177,6 +189,7 @@
             this.cellTen.Name = "cellTen";
             this.cellTen.Size = new System.Drawing.Size(132, 28);
             this.cellTen.TabIndex = 9;
+            this.cellTen.Text = "Fly 10";
             this.cellTen.UseVisualStyleBackColor = true;
             this.cellTen.Click += new System.EventHandler(this.cellTen_Click);
             // 
@@ -187,6 +200,7 @@
             this.cellEleven.Name = "cellEleven";
             this.cellEleven.Size = new System.Drawing.Size(132, 28);
             this.cellEleven.TabIndex = 10;
+            this.cellEleven.Text = "Fly 11";
             this.cellEleven.UseVisualStyleBackColor = true;
             this.cellEleven.Click += new System.EventHandler(this.cellEleven_Click);
             // 
@@ -197,6 +211,7 @@
             this.cellTwelve.Name = "cellTwelve";
             this.cellTwelve.Size = new System.Drawing.Size(132, 28);
             this.cellTwelve.TabIndex = 11;
+            this.cellTwelve.Text = "Fly 12";
             this.cellTwelve.UseVisualStyleBackColor = true;
             this.cellTwelve.Click += new System.EventHandler(this.cellTwelve_Click);
             // 
@@ -207,6 +222,7 @@
             this.cellThirteen.Name = "cellThirteen";
             this.cellThirteen.Size = new System.Drawing.Size(132, 28);
             this.cellThirteen.TabIndex = 12;
+            this.cellThirteen.Text = "Fly 13";
             this.cellThirteen.UseVisualStyleBackColor = true;
             this.cellThirteen.Click += new System.EventHandler(this.cellThirteen_Click);
             // 
@@ -217,6 +233,7 @@
             this.cellFourteen.Name = "cellFourteen";
             this.cellFourteen.Size = new System.Drawing.Size(132, 28);
             this.cellFourteen.TabIndex = 13;
+            this.cellFourteen.Text = "Fly 14";
             this.cellFourteen.UseVisualStyleBackColor = true;
             this.cellFourteen.Click += new System.EventHandler(this.cellFourteen_Click);
             // 
@@ -227,6 +244,7 @@
             this.cellFifteen.Name = "cellFifteen";
             this.cellFifteen.Size = new System.Drawing.Size(132, 28);
             this.cellFifteen.TabIndex = 14;
+            this.cellFifteen.Text = "Fly 15";
             this.cellFifteen.UseVisualStyleBackColor = true;
             this.cellFifteen.Click += new System.EventHandler(this.cellFifteen_Click);
             // 
@@ -237,6 +255,7 @@
             this.cellSixteen.Name = "cellSixteen";
             this.cellSixteen.Size = new System.Drawing.Size(132, 28);
             this.cellSixteen.TabIndex = 15;
+            this.cellSixteen.Text = "Fly 16";
             this.cellSixteen.UseVisualStyleBackColor = true;
             this.cellSixteen.Click += new System.EventHandler(this.cellSixteen_Click);
             // 
@@ -247,6 +266,7 @@
             this.cellSeventeen.Name = "cellSeventeen";
             this.cellSeventeen.Size = new System.Drawing.Size(132, 28);
             this.cellSeventeen.TabIndex = 16;
+            this.cellSeventeen.Text = "Fly 17";
             this.cellSeventeen.UseVisualStyleBackColor = true;
             this.cellSeventeen.Click += new System.EventHandler(this.cellSeventeen_Click);
             // 
@@ -257,6 +277,7 @@
             this.cellEighteen.Name = "cellEighteen";
             this.cellEighteen.Size = new System.Drawing.Size(132, 28);
             this.cellEighteen.TabIndex = 17;
+            this.cellEighteen.Text = "Fly 18";
             this.cellEighteen.UseVisualStyleBackColor = true;
             this.cellEighteen.Click += new System.EventHandler(this.cellEighteen_Click);
             // 
@@ -267,6 +288,7 @@
             this.cellNineteen.Name = "cellNineteen";
             this.cellNineteen.Size = new System.Drawing.Size(132, 28);
             this.cellNineteen.TabIndex = 18;
+            this.cellNineteen.Text = "Fly 19";
             this.cellNineteen.UseVisualStyleBackColor = true;
             this.cellNineteen.Click += new System.EventHandler(this.cellNineteen_Click);
             // 
@@ -277,6 +299,7 @@
             this.cellTwenty.Name = "cellTwenty";
             this.cellTwenty.Size = new System.Drawing.Size(132, 28);
             this.cellTwenty.TabIndex = 19;
+            this.cellTwenty.Text = "Fly 20";
             this.cellTwenty.UseVisualStyleBackColor = true;
             this.cellTwenty.Click += new System.EventHandler(this.cellTwenty_Click);
             // 
@@ -287,6 +310,7 @@
             this.cellTwentyone.Name = "cellTwentyone";
             this.cellTwentyone.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyone.TabIndex = 20;
+            this.cellTwentyone.Text = "Fly 21";
             this.cellTwentyone.UseVisualStyleBackColor = true;
             this.cellTwentyone.Click += new System.EventHandler(this.cellTwentyone_Click);
             // 
@@ -297,6 +321,7 @@
             this.cellTwentytwo.Name = "cellTwentytwo";
             this.cellTwentytwo.Size = new System.Drawing.Size(132, 28);
             this.cellTwentytwo.TabIndex = 21;
+            this.cellTwentytwo.Text = "Fly 22";
             this.cellTwentytwo.UseVisualStyleBackColor = true;
             this.cellTwentytwo.Click += new System.EventHandler(this.cellTwentytwo_Click);
             // 
@@ -307,6 +332,7 @@
             this.cellTwentythree.Name = "cellTwentythree";
             this.cellTwentythree.Size = new System.Drawing.Size(132, 28);
             this.cellTwentythree.TabIndex = 22;
+            this.cellTwentythree.Text = "Fly 23";
             this.cellTwentythree.UseVisualStyleBackColor = true;
             this.cellTwentythree.Click += new System.EventHandler(this.cellTwentythree_Click);
             // 
@@ -317,6 +343,7 @@
             this.cellTwentyfour.Name = "cellTwentyfour";
             this.cellTwentyfour.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyfour.TabIndex = 23;
+            this.cellTwentyfour.Text = "Fly 24";
             this.cellTwentyfour.UseVisualStyleBackColor = true;
             this.cellTwentyfour.Click += new System.EventHandler(this.cellTwentyfour_Click);
             // 
@@ -327,6 +354,7 @@
             this.cellTwentyfive.Name = "cellTwentyfive";
             this.cellTwentyfive.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyfive.TabIndex = 24;
+            this.cellTwentyfive.Text = "Fly 25";
             this.cellTwentyfive.UseVisualStyleBackColor = true;
             this.cellTwentyfive.Click += new System.EventHandler(this.cellTwentyfive_Click);
             // 
@@ -337,6 +365,7 @@
             this.cellTwentysix.Name = "cellTwentysix";
             this.cellTwentysix.Size = new System.Drawing.Size(132, 28);
             this.cellTwentysix.TabIndex = 25;
+            this.cellTwentysix.Text = "Fly 26";
             this.cellTwentysix.UseVisualStyleBackColor = true;
             this.cellTwentysix.Click += new System.EventHandler(this.cellTwentysix_Click);
             // 
@@ -347,6 +376,7 @@
             this.cellTwentyseven.Name = "cellTwentyseven";
             this.cellTwentyseven.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyseven.TabIndex = 26;
+            this.cellTwentyseven.Text = "Fly 27";
             this.cellTwentyseven.UseVisualStyleBackColor = true;
             this.cellTwentyseven.Click += new System.EventHandler(this.cellTwentyseven_Click);
             // 
@@ -357,6 +387,7 @@
             this.cellTwentyeight.Name = "cellTwentyeight";
             this.cellTwentyeight.Size = new System.Drawing.Size(132, 28);
             this.cellTwentyeight.TabIndex = 27;
+            this.cellTwentyeight.Text = "Fly 28";
             this.cellTwentyeight.UseVisualStyleBackColor = true;
             this.cellTwentyeight.Click += new System.EventHandler(this.cellTwentyeight_Click);
             // 
@@ -367,6 +398,7 @@
             this.cellTwentynine.Name = "cellTwentynine";
             this.cellTwentynine.Size = new System.Drawing.Size(132, 28);
             this.cellTwentynine.TabIndex = 28;
+            this.cellTwentynine.Text = "Fly 29";
             this.cellTwentynine.UseVisualStyleBackColor = true;
             this.cellTwentynine.Click += new System.EventHandler(this.cellTwentynine_Click);
             // 
@@ -377,6 +409,7 @@
             this.cellThirty.Name = "cellThirty";
             this.cellThirty.Size = new System.Drawing.Size(132, 28);
             this.cellThirty.TabIndex = 29;
+            this.cellThirty.Text = "Fly 30";
             this.cellThirty.UseVisualStyleBackColor = true;
             this.cellThirty.Click += new System.EventHandler(this.cellThirty_Click);
             // 
@@ -387,6 +420,7 @@
             this.cellThirtyone.Name = "cellThirtyone";
             this.cellThirtyone.Size = new System.Drawing.Size(132, 28);
             this.cellThirtyone.TabIndex = 30;
+            this.cellThirtyone.Text = "Fly 31";
             this.cellThirtyone.UseVisualStyleBackColor = true;
             this.cellThirtyone.Click += new System.EventHandler(this.cellThirtyone_Click);
             // 
@@ -397,6 +431,7 @@
             this.cellThirtytwo.Name = "cellThirtytwo";
             this.cellThirtytwo.Size = new System.Drawing.Size(132, 28);
             this.cellThirtytwo.TabIndex = 31;
+            this.cellThirtytwo.Text = "Fly 32";
             this.cellThirtytwo.UseVisualStyleBackColor = true;
             this.cellThirtytwo.Click += new System.EventHandler(this.cellThirtytwo_Click);
             // 
@@ -502,7 +537,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadDataToolStripMenuItem,
-            this.exportDataToolStripMenuItem});
+            this.exportDataToolStripMenuItem,
+            this.exportActivityDataToolStripMenuItem});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
@@ -520,6 +556,7 @@
             this.exportDataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exportAllToolStripMenuItem,
             this.exportSelectedMonitorToolStripMenuItem});
+            this.exportDataToolStripMenuItem.Enabled = false;
             this.exportDataToolStripMenuItem.Name = "exportDataToolStripMenuItem";
             this.exportDataToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
             this.exportDataToolStripMenuItem.Text = "Export Knockdown Data";
@@ -529,12 +566,38 @@
             this.exportAllToolStripMenuItem.Name = "exportAllToolStripMenuItem";
             this.exportAllToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
             this.exportAllToolStripMenuItem.Text = "Export All Monitors";
+            this.exportAllToolStripMenuItem.Click += new System.EventHandler(this.exportAllToolStripMenuItem_Click);
             // 
             // exportSelectedMonitorToolStripMenuItem
             // 
             this.exportSelectedMonitorToolStripMenuItem.Name = "exportSelectedMonitorToolStripMenuItem";
             this.exportSelectedMonitorToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
             this.exportSelectedMonitorToolStripMenuItem.Text = "Export Selected Monitor";
+            this.exportSelectedMonitorToolStripMenuItem.Click += new System.EventHandler(this.exportSelectedMonitorToolStripMenuItem_Click);
+            // 
+            // exportActivityDataToolStripMenuItem
+            // 
+            this.exportActivityDataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportAllMonitorsToolStripMenuItem,
+            this.exportActivityDataToolStripMenuItem1});
+            this.exportActivityDataToolStripMenuItem.Enabled = false;
+            this.exportActivityDataToolStripMenuItem.Name = "exportActivityDataToolStripMenuItem";
+            this.exportActivityDataToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.exportActivityDataToolStripMenuItem.Text = "Export Activity Data";
+            // 
+            // exportAllMonitorsToolStripMenuItem
+            // 
+            this.exportAllMonitorsToolStripMenuItem.Name = "exportAllMonitorsToolStripMenuItem";
+            this.exportAllMonitorsToolStripMenuItem.Size = new System.Drawing.Size(275, 30);
+            this.exportAllMonitorsToolStripMenuItem.Text = "Export All Monitors";
+            this.exportAllMonitorsToolStripMenuItem.Click += new System.EventHandler(this.exportAllMonitorsToolStripMenuItem_Click);
+            // 
+            // exportActivityDataToolStripMenuItem1
+            // 
+            this.exportActivityDataToolStripMenuItem1.Name = "exportActivityDataToolStripMenuItem1";
+            this.exportActivityDataToolStripMenuItem1.Size = new System.Drawing.Size(275, 30);
+            this.exportActivityDataToolStripMenuItem1.Text = "Export Selected Monitor";
+            this.exportActivityDataToolStripMenuItem1.Click += new System.EventHandler(this.exportActivityDataToolStripMenuItem1_Click);
             // 
             // monitorDataGroupBox
             // 
@@ -558,6 +621,7 @@
             this.monitorDataGridView.RowTemplate.Height = 25;
             this.monitorDataGridView.Size = new System.Drawing.Size(912, 462);
             this.monitorDataGridView.TabIndex = 0;
+            this.monitorDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.monitorDataGridView_CellContentClick);
             // 
             // MainView
             // 
@@ -632,5 +696,8 @@
         private ToolStripMenuItem exportSelectedMonitorToolStripMenuItem;
         private GroupBox monitorDataGroupBox;
         private DataGridView monitorDataGridView;
+        private ToolStripMenuItem exportActivityDataToolStripMenuItem;
+        private ToolStripMenuItem exportAllMonitorsToolStripMenuItem;
+        private ToolStripMenuItem exportActivityDataToolStripMenuItem1;
     }
 }

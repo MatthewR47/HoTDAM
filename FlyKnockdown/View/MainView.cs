@@ -802,7 +802,7 @@ namespace FlyKnockdown.View
                 monitorList.Add(monitor);
             }
 
-            FileController.exportKnockdownData(monitorList);
+            FileController.exportKnockdownData(monitorList, "Knockdown");
         }
 
         private void exportAllMonitorsToolStripMenuItem_Click(object sender, EventArgs e)

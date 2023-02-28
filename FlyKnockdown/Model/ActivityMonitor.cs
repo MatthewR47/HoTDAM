@@ -59,7 +59,6 @@ namespace FlyKnockdown.Model
 
                 flies[i] = new Fly(flyMovement);
                 AnalysisController.assignKnockdown(flies[i], timeIntervals);
-
             }
         }
 

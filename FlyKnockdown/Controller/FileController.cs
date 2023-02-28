@@ -32,8 +32,6 @@ namespace FlyKnockdown.Controller
         {
             using (SaveFileDialog fileDialog = new SaveFileDialog())
             {
-                fileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                fileDialog.FilterIndex = 1;
                 fileDialog.RestoreDirectory = true;
                 fileDialog.FileName = defaultName + ".csv";
 
@@ -100,11 +98,41 @@ namespace FlyKnockdown.Controller
             exportActivityData(monitor, Path.ChangeExtension(inMonitor.ToString(), null) + "_Activity");
         }
 
-        public static void exportKnockdownData(List<ActivityMonitor> monitors)
+        public static void exportKnockdownData(List<ActivityMonitor> monitors, string defaultName)
         {
-            foreach (ActivityMonitor currentMonitor in monitors)
+            using (SaveFileDialog fileDialog = new SaveFileDialog())
             {
+                fileDialog.RestoreDirectory = true;
+                fileDialog.FileName = defaultName + ".csv";
 
+                if (fileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string outputText = "";
+                    foreach (ActivityMonitor currentMonitor in monitors)
+                    {
+                        Fly[] flies = currentMonitor.getFlies();
+                        Dictionary<string, List<int>> groupedKnockdownData = new Dictionary<string, List<int>>();
+
+                        // Prepare the groups
+                        foreach (Fly fly in flies)
+                        {
+                            groupedKnockdownData.Add(fly.getGroupName(), new List<int>());
+                        }
+
+                        // Add the flies
+                        foreach (Fly fly in flies)
+                        {
+                            groupedKnockdownData[fly.getGroupName()].Add(fly.getTimeAlive());
+                        }
+
+                        // Add the labels
+                        outputText += currentMonitor.ToString() + "\n";
+
+                       
+                        outputText += "\n";
+                    }
+                    File.WriteAllText(fileDialog.FileName, outputText);
+                }
             }
         }
 
@@ -112,7 +140,7 @@ namespace FlyKnockdown.Controller
         {
             List<ActivityMonitor> monitor = new List<ActivityMonitor>();
             monitor.Add(inMonitor);
-            exportKnockdownData(monitor);
+            exportKnockdownData(monitor, Path.ChangeExtension(inMonitor.ToString(), null) + "_Knockdown");
         }
     }
 }

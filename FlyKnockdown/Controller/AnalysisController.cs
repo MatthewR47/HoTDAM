@@ -6,7 +6,20 @@ namespace FlyKnockdown.Controller
     {
         public static void assignKnockdown(Fly fly, String[,] timeIntervals)
         {
-            
+            int movementIndex = 301;
+            string timesCrossed = "0";
+            while(movementIndex >= 0 && !timesCrossed.Equals("0"))
+            {
+                timesCrossed = fly.getMovement()[movementIndex];
+                movementIndex--;
+            }
+
+            DateTime start = DateTime.Parse(timeIntervals[0,0] + " " + timeIntervals[0,1]);
+            DateTime end = DateTime.Parse(timeIntervals[movementIndex+1,0] + " " + 
+                                          timeIntervals[movementIndex+1,1]);
+
+            TimeSpan timeAlive = end - start;
+            fly.setTimeAlive((int)(timeAlive.TotalSeconds));
         }
     }
 }

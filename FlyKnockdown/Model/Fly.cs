@@ -2,7 +2,7 @@
 {
     internal class Fly
     {
-        private int timeAlive = 0;
+        private double timeAlive = 0;
         private string groupName = "";
         private string[] movement;
 
@@ -16,12 +16,12 @@
             return movement;
         }
 
-        public void setTimeAlive(int timeAlive)
+        public void setTimeAlive(double timeAlive)
         {
             this.timeAlive = timeAlive;
         }
 
-        public int getTimeAlive() 
+        public double getTimeAlive() 
         {
             return this.timeAlive;
         }

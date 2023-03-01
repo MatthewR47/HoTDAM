@@ -32,9 +32,10 @@ namespace FlyKnockdown.Model
 
         public void assignTimeInterval()
         {
-            timeIntervals = new string[302,2];
+            
             string[] lines = File.ReadAllLines(@fileName);
-            for (int i = 0; i < 302; i++)
+            timeIntervals = new string[lines.Length, 2];
+            for (int i = 0; i < lines.Length; i++)
             {
                 string[] lineElements = lines[i].Split("\t");
                 timeIntervals[i,0] = lineElements[1];
@@ -49,9 +50,9 @@ namespace FlyKnockdown.Model
 
             for (int i = 0; i < 32; i++)
             {
-                string[] flyMovement = new string[302];
+                string[] flyMovement = new string[lines.Length];
 
-                for (int j = 0; j < 302; j++)
+                for (int j = 0; j < lines.Length; j++)
                 {
                     string[] lineElements = lines[j].Split("\t");
                     flyMovement[j] = lineElements[i + 10];

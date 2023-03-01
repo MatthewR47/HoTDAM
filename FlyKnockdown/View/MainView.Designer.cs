@@ -61,7 +61,6 @@
             this.cellThirtyone = new System.Windows.Forms.Button();
             this.cellThirtytwo = new System.Windows.Forms.Button();
             this.groupDesignationGroupBox = new System.Windows.Forms.GroupBox();
-            this.copyGroupDefinitionsBtn = new System.Windows.Forms.Button();
             this.groupDefineBtn = new System.Windows.Forms.Button();
             this.monitorListBox = new System.Windows.Forms.ListBox();
             this.monitorGroupBox = new System.Windows.Forms.GroupBox();
@@ -437,7 +436,6 @@
             // 
             // groupDesignationGroupBox
             // 
-            this.groupDesignationGroupBox.Controls.Add(this.copyGroupDefinitionsBtn);
             this.groupDesignationGroupBox.Controls.Add(this.groupDefineBtn);
             this.groupDesignationGroupBox.Controls.Add(this.cellEight);
             this.groupDesignationGroupBox.Controls.Add(this.cellThirtytwo);
@@ -479,15 +477,6 @@
             this.groupDesignationGroupBox.TabIndex = 32;
             this.groupDesignationGroupBox.TabStop = false;
             this.groupDesignationGroupBox.Text = "Group Designation";
-            // 
-            // copyGroupDefinitionsBtn
-            // 
-            this.copyGroupDefinitionsBtn.Location = new System.Drawing.Point(699, 180);
-            this.copyGroupDefinitionsBtn.Name = "copyGroupDefinitionsBtn";
-            this.copyGroupDefinitionsBtn.Size = new System.Drawing.Size(330, 43);
-            this.copyGroupDefinitionsBtn.TabIndex = 33;
-            this.copyGroupDefinitionsBtn.Text = "Copy Group Definitions";
-            this.copyGroupDefinitionsBtn.UseVisualStyleBackColor = true;
             // 
             // groupDefineBtn
             // 
@@ -687,7 +676,6 @@
         private ListBox monitorListBox;
         private GroupBox monitorGroupBox;
         private Button groupDefineBtn;
-        private Button copyGroupDefinitionsBtn;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem loadDataToolStripMenuItem;

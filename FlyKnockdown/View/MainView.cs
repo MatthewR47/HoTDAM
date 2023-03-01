@@ -31,7 +31,7 @@ namespace FlyKnockdown.View
                 groupDefineBtn.Text = "Stop Multi-Select Group Definition";
                 monitorGroupBox.Enabled = false;           
                 menuStrip1.Enabled = false;
-                copyGroupDefinitionsBtn.Enabled = false;
+                //copyGroupDefinitionsBtn.Enabled = false;
                 monitorDataGroupBox.Enabled = false;
                 exportActivityDataToolStripMenuItem.Enabled = false;
                 exportDataToolStripMenuItem.Enabled = false;
@@ -46,7 +46,7 @@ namespace FlyKnockdown.View
                 groupDefineBtn.Text = "Start Multi-Select Group Definition";
                 monitorGroupBox.Enabled = true;
                 menuStrip1.Enabled = true;
-                copyGroupDefinitionsBtn.Enabled = true;
+                //copyGroupDefinitionsBtn.Enabled = true;
                 monitorDataGroupBox.Enabled = true;
                 exportActivityDataToolStripMenuItem.Enabled = true;
                 exportDataToolStripMenuItem.Enabled = true;
@@ -76,11 +76,11 @@ namespace FlyKnockdown.View
                                   "files selected (this is often caused by the file " +
                                   "being open in another program).");
             }
-            catch (Exception) 
-            {
-                showMessageDialog("There was an issue with one or more of the files" +
-                                  " you selected.");
-            }
+            //catch (Exception)
+           // {
+            //    showMessageDialog("There was an issue with one or more of the files" +
+          //                        " you selected.");
+          //  }
         }
 
         private static DialogResult showInputDialog(ref string input)
@@ -142,20 +142,20 @@ namespace FlyKnockdown.View
 
             // Add the actual data
             string[,] timeStamps = ((ActivityMonitor)monitorListBox.SelectedItem).getTimeInterval();
-            string[,] dataGridInformation = new string[33, 302];
-            for (int i = 0; i < 302; i++)
+            string[,] dataGridInformation = new string[33, timeStamps.GetLength(0)];
+            for (int i = 0; i < timeStamps.GetLength(0); i++)
             {
                 dataGridInformation[0, i] = timeStamps[i, 1];
             }
             for (int i = 0; i < 32; i++)
             {
-                for (int j = 0; j < 302; j++)
+                for (int j = 0; j < timeStamps.GetLength(0); j++)
                 {
                     dataGridInformation[i + 1, j] = flies[i].getMovement()[j];
                 }
             }
 
-            for (int i = 0; i < 302; i++)
+            for (int i = 0; i < timeStamps.GetLength(0); i++)
             {
                 DataGridViewRow dataRow = new DataGridViewRow();
                 dataRow.CreateCells(monitorDataGridView);
@@ -168,7 +168,7 @@ namespace FlyKnockdown.View
             }
         }
 
-        private static void showMessageDialog(string message)
+        public static void showMessageDialog(string message)
         {
             System.Drawing.Size size = new System.Drawing.Size(200, 70);
             Form messageBox = new Form();
@@ -785,12 +785,33 @@ namespace FlyKnockdown.View
 
         private void exportActivityDataToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FileController.exportActivityData((ActivityMonitor)monitorListBox.SelectedItem);
+            try
+            {
+                FileController.exportActivityData((ActivityMonitor)monitorListBox.SelectedItem);
+            }catch(IOException)
+            {
+                showMessageDialog("That file is being used by another program.\nPlease close that program and try to export again.");
+            }catch(Exception)
+            {
+                showMessageDialog("There was an issue exporting.");
+            }
+            
         }
 
         private void exportSelectedMonitorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FileController.exportKnockdownData((ActivityMonitor)monitorListBox.SelectedItem);
+            try
+            {
+                FileController.exportKnockdownData((ActivityMonitor)monitorListBox.SelectedItem);
+            }catch(IOException)
+            {
+                showMessageDialog("That file is being used by another program.\nPlease close that program and try to export again.");
+            }catch(Exception)
+            {
+                showMessageDialog("There was an issue exporting.");
+            }
+            
+
         }
 
         private void exportAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -801,8 +822,18 @@ namespace FlyKnockdown.View
             {
                 monitorList.Add(monitor);
             }
-
-            FileController.exportKnockdownData(monitorList, "Knockdown");
+            try
+            {
+                FileController.exportKnockdownData(monitorList, "Knockdown");
+            }
+            catch (IOException)
+            {
+                showMessageDialog("That file is being used by another program.\nPlease close that program and try to export again.");
+            }
+            catch (Exception)
+            {
+                showMessageDialog("There was an issue exporting.");
+            }
         }
 
         private void exportAllMonitorsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -813,8 +844,18 @@ namespace FlyKnockdown.View
             {
                 monitorList.Add(monitor);
             }
-
-            FileController.exportActivityData(monitorList, "Activity");
+            try
+            {
+                FileController.exportActivityData(monitorList, "Activity");
+            }
+            catch (IOException)
+            {
+                showMessageDialog("That file is being used by another program.\nPlease close that program and try to export again.");
+            }
+            catch (Exception)
+            {
+                showMessageDialog("There was an issue exporting.");
+            }
         }
 
         private void monitorDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

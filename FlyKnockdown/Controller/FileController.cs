@@ -1,4 +1,5 @@
 ﻿using FlyKnockdown.Model;
+using FlyKnockdown.View;
 using System.Windows.Forms;
 
 namespace FlyKnockdown.Controller
@@ -62,20 +63,20 @@ namespace FlyKnockdown.Controller
 
                         // Add the actual data
                         string[,] timeStamps = currentMonitor.getTimeInterval();
-                        string[,] dataGridInformation = new string[33, 302];
-                        for (int i = 0; i < 302; i++)
+                        string[,] dataGridInformation = new string[33, timeStamps.GetLength(0)];
+                        for (int i = 0; i < timeStamps.GetLength(0); i++)
                         {
                             dataGridInformation[0, i] = timeStamps[i, 1];
                         }
                         for (int i = 0; i < 32; i++)
                         {
-                            for (int j = 0; j < 302; j++)
+                            for (int j = 0; j < timeStamps.GetLength(0); j++)
                             {
                                 dataGridInformation[i + 1, j] = flies[i].getMovement()[j];
                             }
                         }
 
-                        for (int i = 0; i < 302; i++)
+                        for (int i = 0; i < timeStamps.GetLength(0); i++)
                         {
                             for (int j = 0; j < 33; j++)
                             {
@@ -113,21 +114,50 @@ namespace FlyKnockdown.Controller
                         Fly[] flies = currentMonitor.getFlies();
                         Dictionary<string, List<int>> groupedKnockdownData = new Dictionary<string, List<int>>();
 
+                        HashSet<string> groups = new HashSet<string>();
+
                         // Prepare the groups
                         foreach (Fly fly in flies)
                         {
-                            groupedKnockdownData.Add(fly.getGroupName(), new List<int>());
+                            groups.Add(fly.getGroupName());
                         }
 
-                        // Add the flies
-                        foreach (Fly fly in flies)
+                        string[,] outputMatrix = new string[33, groups.Count];
+
+                        int count = 0;
+                        foreach (string group in groups)
                         {
-                            groupedKnockdownData[fly.getGroupName()].Add(fly.getTimeAlive());
+                            outputMatrix[0,count] = group;
+                            int bottomIndex = 0;
+                            for (int i = 0; i < flies.Length; i++)
+                            {
+                                if (flies[i].getGroupName().Equals(group))
+                                {
+                                    bottomIndex++;
+                                    outputMatrix[bottomIndex, count] = flies[i].getTimeAlive().ToString();
+                                }
+                            }
+                            count++;
                         }
 
-                        // Add the labels
+                        // Build the output text
                         outputText += currentMonitor.ToString() + "\n";
 
+                        for (int i = 0; i < 33; i++)
+                        {
+                            for (int j = 0; j < groups.Count; j++)
+                            {
+                                try
+                                {
+                                    outputText += outputMatrix[i,j] + ",";
+                                } catch (Exception)
+                                {
+                                    
+                                }
+                            }
+                            outputText = outputText.Substring(0, outputText.Length - 1);
+                            outputText += "\n";
+                        }
                        
                         outputText += "\n";
                     }

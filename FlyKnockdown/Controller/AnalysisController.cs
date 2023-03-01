@@ -1,4 +1,5 @@
 ﻿using FlyKnockdown.Model;
+using FlyKnockdown.View;
 
 namespace FlyKnockdown.Controller
 {
@@ -6,9 +7,9 @@ namespace FlyKnockdown.Controller
     {
         public static void assignKnockdown(Fly fly, String[,] timeIntervals)
         {
-            int movementIndex = 301;
+            int movementIndex = fly.getMovement().Length - 1;
             string timesCrossed = "0";
-            while(movementIndex >= 0 && !timesCrossed.Equals("0"))
+            while(movementIndex >= 0 && timesCrossed.Equals("0"))
             {
                 timesCrossed = fly.getMovement()[movementIndex];
                 movementIndex--;
@@ -19,7 +20,7 @@ namespace FlyKnockdown.Controller
                                           timeIntervals[movementIndex+1,1]);
 
             TimeSpan timeAlive = end - start;
-            fly.setTimeAlive((int)(timeAlive.TotalSeconds));
+            fly.setTimeAlive(timeAlive.TotalMinutes);
         }
     }
 }

@@ -862,5 +862,10 @@ namespace FlyKnockdown.View
         {
 
         }
+
+        private void MainView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

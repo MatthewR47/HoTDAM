@@ -75,6 +75,7 @@
             this.exportActivityDataToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.monitorDataGroupBox = new System.Windows.Forms.GroupBox();
             this.monitorDataGridView = new System.Windows.Forms.DataGridView();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupDesignationGroupBox.SuspendLayout();
             this.monitorGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -515,7 +516,8 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1184, 33);
@@ -612,6 +614,14 @@
             this.monitorDataGridView.TabIndex = 0;
             this.monitorDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.monitorDataGridView_CellContentClick);
             // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(61, 29);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -688,5 +698,6 @@
         private ToolStripMenuItem exportActivityDataToolStripMenuItem;
         private ToolStripMenuItem exportAllMonitorsToolStripMenuItem;
         private ToolStripMenuItem exportActivityDataToolStripMenuItem1;
+        private ToolStripMenuItem helpToolStripMenuItem;
     }
 }

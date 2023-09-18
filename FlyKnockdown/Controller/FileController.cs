@@ -19,6 +19,8 @@ namespace FlyKnockdown.Controller
 
                 if (fileDialog.ShowDialog() == DialogResult.OK)
                 {
+                    // Instantiate a monitor object for each
+                    // of the exported monitor files.
                     foreach (string file in fileDialog.FileNames)
                     {
                         ActivityMonitor monitor = new ActivityMonitor(file);

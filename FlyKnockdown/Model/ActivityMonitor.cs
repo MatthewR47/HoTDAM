@@ -43,6 +43,10 @@ namespace FlyKnockdown.Model
             }
         }
 
+        /**
+         * This method adds all of the flys present that would be part 
+         * of a monitor output file tto a monitor object.
+         */
         public void assignFlies()
         {
             flies = new Fly[32];
@@ -59,6 +63,7 @@ namespace FlyKnockdown.Model
                 }
 
                 flies[i] = new Fly(flyMovement);
+                flies[i].setGroupName("Fly " + (i+1));
                 AnalysisController.assignKnockdown(flies[i], timeIntervals);
             }
         }

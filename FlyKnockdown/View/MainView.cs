@@ -177,7 +177,7 @@ namespace FlyKnockdown.View
 
             messageBox.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             messageBox.ClientSize = size;
-            messageBox.Text = "Name";
+            messageBox.Text = "Message";
 
             System.Windows.Forms.Label label = new Label();
             label.AutoSize = true;
@@ -866,6 +866,22 @@ namespace FlyKnockdown.View
         private void MainView_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showMessageDialog("This program is intended for use with DAM2 data files. For instructions on precursor steps " +
+                "to using this program, please refer to the ReadMe file distributed with the release of this program.\n\nDAM2 data " +
+                "files can be imported into the HoTDAM! software (File>Load Monitor Data). Once imported, the files can now be seen " +
+                "within “Monitor Data” section. If multiple monitor data files were\nimported, you can switch between these in the " +
+                "“Monitor Select” section. The cell numbers in the “Group Designation” section correspond to the numbers associated " +
+                "with the cells in the DAM2\nmonitors. To designate experimental groups, you can click on any individual cell to edit " +
+                "group names. Alternatively, you can use the mult-select group definition tool. Once experimental groups\nhave been " +
+                "designated, you can export the TKD data (File>Export Knockdown Data) or the activity data for the duration of the " +
+                "heat shock (File>Export Activity Data). The HoTDAM!\nsoftware will export the TKD and activity data as an Excel file. " +
+                "At this point, you are ready to analyze your rearranged TKD or activity data with a statistics software!\n\n\nThank you" +
+                " for using HoTDAM! from the Carlson Lab at the University of Nebraska at Kearney. \n\nSource code is available at " +
+                "https://github.com/MatthewR47/HoTDAM\n");
         }
     }
 }

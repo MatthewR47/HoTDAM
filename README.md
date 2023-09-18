@@ -20,7 +20,7 @@ At this point, the scanned DAM2 data files can be imported into the HoTDAM! soft
 
 Once imported, the files can now be seen within “Monitor Data” section. If multiple monitor data files were imported, you can switch between these in the “Monitor Select” section.
 
-The cell numbers in the “Group Designation” section correspond to the numbers associated with the cells in the DAM2 monitors. To designate experimental groups, you can click on any individual cell to edit group names. Alternatively, you can use the mult-select
+The cell numbers in the “Group Designation” section correspond to the numbers associated with the cells in the DAM2 monitors. To designate experimental groups, you can click on any individual cell to edit group names. Alternatively, you can use the mult-select group definition tool.
 
 Once experimental groups have been designated, you can export the TKD data (File>Export Knockdown Data) or the activity data for the duration of the heat shock (File>Export Activity Data).
 

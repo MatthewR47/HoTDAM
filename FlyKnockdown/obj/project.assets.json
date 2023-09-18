@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matth\\Documents\\Blase\\Program\\HoTDAM\\FlyKnockdown\\FlyKnockdown.csproj",
+      "projectUniqueName": "C:\\Users\\matth\\source\\repos\\FlyKnockdown\\HoTDAM\\FlyKnockdown\\FlyKnockdown.csproj",
       "projectName": "FlyKnockdown",
-      "projectPath": "C:\\Users\\matth\\Documents\\Blase\\Program\\HoTDAM\\FlyKnockdown\\FlyKnockdown.csproj",
+      "projectPath": "C:\\Users\\matth\\source\\repos\\FlyKnockdown\\HoTDAM\\FlyKnockdown\\FlyKnockdown.csproj",
       "packagesPath": "C:\\Users\\matth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matth\\Documents\\Blase\\Program\\HoTDAM\\FlyKnockdown\\obj\\",
+      "outputPath": "C:\\Users\\matth\\source\\repos\\FlyKnockdown\\HoTDAM\\FlyKnockdown\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\matth\\AppData\\Roaming\\NuGet\\NuGet.Config",

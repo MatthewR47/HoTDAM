@@ -36,7 +36,7 @@ namespace FlyKnockdown.Controller
             using (SaveFileDialog fileDialog = new SaveFileDialog())
             {
                 fileDialog.RestoreDirectory = true;
-                fileDialog.FileName = defaultName + ".csv";
+                fileDialog.FileName = defaultName;
 
                 if (fileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -89,7 +89,7 @@ namespace FlyKnockdown.Controller
                         }
                         outputText += "\n";
                     }
-                    File.WriteAllText(fileDialog.FileName, outputText);
+                    File.WriteAllText(fileDialog.FileName + ".csv", outputText);
                 }
             }
         }
@@ -106,7 +106,7 @@ namespace FlyKnockdown.Controller
             using (SaveFileDialog fileDialog = new SaveFileDialog())
             {
                 fileDialog.RestoreDirectory = true;
-                fileDialog.FileName = defaultName + ".csv";
+                fileDialog.FileName = defaultName;
 
                 if (fileDialog.ShowDialog() == DialogResult.OK)
                 {
@@ -163,7 +163,7 @@ namespace FlyKnockdown.Controller
                        
                         outputText += "\n";
                     }
-                    File.WriteAllText(fileDialog.FileName, outputText);
+                    File.WriteAllText(fileDialog.FileName + ".csv", outputText);
                 }
             }
         }
